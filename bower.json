@@ -1,0 +1,14 @@
+{
+  "name": "adapt-lens",
+  "version": "1.0.0",
+  "framework": ">=5.19.1",
+  "homepage": "https://github.com/nachocinalli/adapt-lens",
+  "bugs": "https://github.com/nachocinalli/adapt-lens/issues",
+  "component": "lens",
+  "targetAttribute": "_lens",
+  "displayName": "Lens",
+  "description": "Adapt lens component",
+  "main": "/js/adapt-lens.js",
+  "keywords": ["adapt-plugin", "adapt-component"],
+  "license": "GPL-3.0"
+}

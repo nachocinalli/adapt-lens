@@ -1,0 +1,109 @@
+{
+  "$anchor": "lens-component",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "$merge": {
+    "source": {
+      "$ref": "component"
+    },
+    "with": {
+      "properties": {
+        "_supportedLayout": {
+          "type": "string",
+          "title": "Supported layout",
+          "default": "full-width",
+          "enum": ["full-width", "half-width", "both"],
+          "_adapt": {
+            "editorOnly": true
+          }
+        },
+        "instruction": {
+          "type": "string",
+          "title": "Instruction",
+          "default": "",
+          "_adapt": {
+            "translatable": true
+          }
+        },
+        "_setCompletionOn": {
+          "type": "string",
+          "title": "Completion criteria",
+          "description": "Whether completion is based on the learner having viewed all the items - or just having viewed the component",
+          "default": "allItems",
+          "enum": ["inview", "allItems"],
+          "_backboneForms": "Select"
+        },
+        "_graphic": {
+          "type": "object",
+          "title": "Graphic",
+          "default": {},
+          "properties": {
+            "src": {
+              "type": "string",
+              "isObjectId": true,
+              "title": "Source",
+              "description": "",
+              "_backboneForms": {
+                "type": "Asset",
+                "media": "image"
+              }
+            },
+            "alt": {
+              "type": "string",
+              "title": "Alternative text",
+              "description": "A description of the image",
+              "default": "",
+              "_adapt": {
+                "translatable": true
+              }
+            },
+            "aspectRatio": {
+              "type": "string",
+              "title": "Aspect Ratio",
+              "description": "",
+              "default": ""
+            }
+          }
+        },
+        "itemsLegend": {
+          "type": "string",
+          "title": "Legend",
+          "description": "",
+          "default": "",
+          "_adapt": {
+            "translatable": true
+          }
+        },
+        "_items": {
+          "type": "array",
+          "title": "Items",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string",
+                "title": "Title",
+                "default": "",
+                "_adapt": {
+                  "translatable": true
+                }
+              },
+              "backgroundPosition": {
+                "type": "string",
+                "title": "Background Position",
+                "description": "",
+                "default": ""
+              },
+              "backgroundSize": {
+                "type": "string",
+                "title": "Background Size",
+                "description": "",
+                "default": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

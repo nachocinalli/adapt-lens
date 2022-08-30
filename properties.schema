@@ -1,0 +1,129 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-04/schema",
+  "id": "http://jsonschema.net",
+  "$ref": "http://localhost/plugins/content/component/model.schema",
+  "globals": {
+    "ariaRegion": {
+      "type": "string",
+      "required": true,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "translatable": true
+    }
+  },
+  "properties": {
+    "_supportedLayout": {
+      "type": "string",
+      "required": true,
+      "enum": ["full-width", "half-width", "both"],
+      "default": "full-width",
+      "editorOnly": true
+    },
+    "instruction": {
+      "type": "string",
+      "required": false,
+      "default": "",
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the instruction text",
+      "translatable": true
+    },
+    "_setCompletionOn": {
+      "type": "string",
+      "required": false,
+      "default": "allItems",
+      "title": "Set completion on:",
+      "enum": ["inview", "allItems"],
+      "inputType": {
+        "type": "Select",
+        "options": ["inview", "allItems"]
+      },
+      "validators": [],
+      "help": "Whether completion is based on the learner having viewed all the items - or just having viewed the component"
+    },
+     "_graphic": {
+            "type": "object",
+            "required": true,
+            "title": "Graphic",
+            "properties": {
+              "src": {
+                "type": "string",
+                "required": true,
+                "default": "",
+                "inputType": "Asset:image",
+                "validators": [],
+                "help": ""
+              },
+              "alt": {
+                "type": "string",
+                "required": false,
+                "default": "",
+                "inputType": "Text",
+                "validators": [],
+                "help": "A description of the image",
+                "translatable": true
+              },
+              "aspectRatio": {
+                "type": "string",
+                "required": false,
+                "default": "",
+                "inputType": "Text",
+                "validators": [],
+                "help": "Aspect ratio the image"
+              }
+            }
+          },
+          "itemsLegend": {
+                "type": "string",
+                "title": "Legend",
+                "required": false,
+                "default": "",
+                "inputType": "Text",
+                "validators": [],
+                "help": "",
+                "translatable": true
+              },
+          
+    "_items": {
+      "type": "array",
+      "required": true,
+      "title": "Items",
+      "items": {
+        "type": "object",
+        "required": true,
+        "properties": {
+          "title": {
+            "type": "string",
+            "required": true,
+            "inputType": "Text",
+            "title": "Item Title",
+            "default": "",
+            "validators": ["required"],
+            "help": "This is the item title",
+            "translatable": true
+          },
+          "backgroundPosition": {
+            "type": "string",
+            "required": false,
+            "inputType": "Text",
+            "title": "Background Position",
+            "default": "",
+            "validators": [],
+            "help": ""
+          },
+          "backgroundSize": {
+            "type": "string",
+            "required": false,
+            "inputType": "Text",
+            "title": "Background Size",
+            "default": "",
+            "validators": [],
+            "help": ""
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "_id": "c-05",
+  "_parentId": "b-05",
+  "_type": "component",
+  "_component": "lens",
+  "_classes": "",
+  "_layout": "full",
+  "title": "Lens",
+  "displayTitle": "Lens Title",
+  "body": "This is optional body text.",
+  "instruction": ".",
+  "_comment": "setCompletionOn = inview | allItems",
+  "_setCompletionOn": "allItems",
+  "_graphic": {
+    "src": "course/en/images/example.jpg",
+    "alt": "",
+    "aspectRatio": "1920 / 2880"
+  },
+  "itemsLegend": "Optional legend",
+  "_items": [
+    {
+      "title": "Default",
+      "backgroundPosition": "50% 50%",
+      "backgroundSize": "100%"
+    },
+    {
+      "title": "Item 1",
+      "backgroundPosition": "60% 100%",
+      "backgroundSize": "230%"
+    },
+    {
+      "title": "Item 2",
+      "backgroundPosition": "17% 5%",
+      "backgroundSize": "285%"
+    },
+    {
+      "title": "Item 3",
+      "backgroundPosition": "80% 60%",
+      "backgroundSize": "700%"
+    },
+    {
+      "title": "Item 4",
+      "backgroundPosition": "24% 70%",
+      "backgroundSize": "285%"
+    },
+    {
+      "title": "Item 5",
+      "backgroundPosition": "65% 52%",
+      "backgroundSize": "780%"
+    }
+  ],
+  "_pageLevelProgress": {
+    "_isEnabled": true
+  }
+}
