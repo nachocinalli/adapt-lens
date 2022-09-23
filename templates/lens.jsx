@@ -13,7 +13,7 @@ export default function Lens (props) {
     _ariaLevel,
     onChange
   } = props;
-  const itemAriaLevel = _.isNumber(_ariaLevel) ? _ariaLevel + 1 : _ariaLevel;
+  const itemAriaLevel = _.isNumber(_ariaLevel) && _ariaLevel !== 0 ? _ariaLevel + 1 : _ariaLevel;
   const itemActive = _items.find(item => item._isActive);
 
   return (
